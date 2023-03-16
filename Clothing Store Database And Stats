@@ -1,0 +1,25 @@
+--Create a clothing store database.
+
+CREATE TABLE inventory (id INTEGER PRIMARY KEY, name TEXT, color TEXT, size TEXT, quantity INTEGER, price INTEGER); 
+
+INSERT INTO inventory VALUES (1, "leggings", "black", "small", 20, 15);
+INSERT INTO inventory VALUES (2, "leggings", "black", "medium", 50, 15);
+INSERT INTO inventory VAlUES (3, "leggings", "black", "large", 50, 15);
+INSERT INTO inventory VALUES (4, "crew neck", "grey", "small", 20, 40);
+INSERT INTO inventory VALUES (5, "crew neck", "grey", "medium", 75,40);
+INSERT INTO inventory VALUES (6, "crew neck", "grey", "large", 75, 40);
+INSERT INTO inventory VALUES (7, "hoodie", "orange", "small", 25, 50);
+INSERT INTO inventory VALUES (8, "hoodie", "orange", "medium", 70, 50);
+INSERT INTO inventory VALUES (9, "hoodie", "orange", "large", 65, 50);
+INSERT INTO inventory VALUES (10, "graphic tee", "black", "small", 50, 30);
+INSERT INTO inventory VALUES (11, "graphic tee", "black", "medium", 78,30);
+INSERT INTO inventory VALUES (12, "graphic tee", "black", "large", 86, 30);
+INSERT INTO inventory VALUES (13, "slides", "black", "small", 120, 28);
+INSERT INTO inventory VALUES (14, "slides", "black", "medium", 145, 28);
+INSERT INTO inventory VALUES (15, "slides", "black", "larger", 172, 28);
+
+-- Display database ordered by price.
+SELECT * FROM inventory ORDER BY price; 
+
+-- What items are priced under $30.
+SELECT * FROM inventory WHERE price > 30;
